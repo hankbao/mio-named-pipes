@@ -570,7 +570,7 @@ impl Inner {
     }
 }
 
-unsafe fn cancel(handle: &AsRawHandle,
+unsafe fn cancel(handle: &dyn AsRawHandle,
                  overlapped: &windows::Overlapped) -> io::Result<()> {
     let ret = CancelIoEx(handle.as_raw_handle(), overlapped.as_mut_ptr() as *mut _);
     if ret == 0 {
