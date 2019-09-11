@@ -13,7 +13,7 @@ Windows named pipe bindings for mio.
 
 [target.'cfg(windows)'.dependencies]
 log = "0.4"
-mio = "0.6.5"
+mio = { git = "https://github.com/hankbao/mio.git", branch = "v0.6.x-windows" }
 miow = "0.3"
 
 [target.'cfg(windows)'.dependencies.winapi]
